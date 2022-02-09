@@ -22,9 +22,7 @@ class FileReader implements FileReaderInterface
 
         $result = [];
         while (!$fileObject->eof()) {
-            /** @var array<string> $row */
-            $row = $fileObject->fgetcsv();
-            $result[] = $row;
+            $result[] = $fileObject->fgetcsv();
         }
 
         return $result;

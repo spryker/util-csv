@@ -25,7 +25,6 @@ class FileExporter implements FileExporterInterface
 
         $streamedResponse = new StreamedResponse();
         $streamedResponse->setCallback(function () use ($csvFileTransfer) {
-            /** @var resource $csvHandle */
             $csvHandle = fopen('php://output', 'w+');
             if ($csvFileTransfer->getHeader() && is_array($csvFileTransfer->getHeader())) {
                 fputcsv($csvHandle, $csvFileTransfer->getHeader());
