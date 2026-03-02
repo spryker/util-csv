@@ -13,11 +13,6 @@ use Symfony\Component\HttpFoundation\StreamedResponse;
 
 class FileExporter implements FileExporterInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\CsvFileTransfer $csvFileTransfer
-     *
-     * @return \Symfony\Component\HttpFoundation\StreamedResponse
-     */
     public function exportFile(CsvFileTransfer $csvFileTransfer): StreamedResponse
     {
         $csvFileTransfer->requireFileName();
@@ -86,12 +81,6 @@ class FileExporter implements FileExporterInterface
         }
     }
 
-    /**
-     * @param \Symfony\Component\HttpFoundation\StreamedResponse $response
-     * @param \Generated\Shared\Transfer\CsvFileTransfer $csvFileTransfer
-     *
-     * @return void
-     */
     protected function configureResponseHeaders(StreamedResponse $response, CsvFileTransfer $csvFileTransfer): void
     {
         $response->setStatusCode(Response::HTTP_OK);

@@ -15,17 +15,11 @@ use Spryker\Service\UtilCsv\Reader\FileReaderInterface;
 
 class UtilCsvServiceFactory extends AbstractServiceFactory
 {
-    /**
-     * @return \Spryker\Service\UtilCsv\Reader\FileReaderInterface
-     */
     public function createFileReader(): FileReaderInterface
     {
         return new FileReader();
     }
 
-    /**
-     * @return \Spryker\Service\UtilCsv\Exporter\FileExporterInterface
-     */
     public function createFileExporter(): FileExporterInterface
     {
         return new FileExporter();

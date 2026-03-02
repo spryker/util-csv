@@ -5,7 +5,7 @@
  * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
  */
 
-namespace SprykerTest\Service\UtilCsv;
+namespace SprykerTest\Service\UtilCsv\Exporter;
 
 use Codeception\Test\Unit;
 use Generated\Shared\Transfer\CsvFileTransfer;
@@ -19,10 +19,9 @@ use Spryker\Service\UtilCsv\Exporter\FileExporterInterface;
  * @group SprykerTest
  * @group Service
  * @group UtilCsv
+ * @group Exporter
  * @group FileExporterTest
  * Add your own group annotations below this line
- *
- * @property \SprykerTest\Service\UtilCsv\UtilCsvServiceTester $tester
  */
 class FileExporterTest extends Unit
 {
@@ -31,9 +30,6 @@ class FileExporterTest extends Unit
      */
     protected const SKUS = ['sku1', 'sku2', 'sku3'];
 
-    /**
-     * @return void
-     */
     public function testExportWithDataGenerators(): void
     {
         // Arrange
@@ -67,9 +63,6 @@ class FileExporterTest extends Unit
         }
     }
 
-    /**
-     * @return \Spryker\Service\UtilCsv\Exporter\FileExporterInterface
-     */
     protected function createFileExporter(): FileExporterInterface
     {
         return new FileExporter();
