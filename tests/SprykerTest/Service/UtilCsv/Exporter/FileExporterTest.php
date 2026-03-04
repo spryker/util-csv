@@ -5,7 +5,7 @@
  * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
  */
 
-namespace SprykerTest\Service\UtilCsv;
+namespace SprykerTest\Service\UtilCsv\Exporter;
 
 use Codeception\Test\Unit;
 use Generated\Shared\Transfer\CsvFileTransfer;
@@ -19,6 +19,7 @@ use Spryker\Service\UtilCsv\Exporter\FileExporterInterface;
  * @group SprykerTest
  * @group Service
  * @group UtilCsv
+ * @group Exporter
  * @group FileExporterTest
  * Add your own group annotations below this line
  *
